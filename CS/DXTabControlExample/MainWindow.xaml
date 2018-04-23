@@ -1,0 +1,55 @@
+﻿<dx:DXWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxcn="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" 
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        dx:ThemeManager.ThemeName="Office2013"
+        x:Class="DXTabControlExample.MainWindow"
+        Title="Theming" Height="350" Width="550">
+    <Window.Resources>
+        <DataTemplate x:Key="TabControlBackground">
+            <dxcn:TabBorder ViewInfo="{Binding}" BorderBrush="Wheat" BorderThickness="1" BorderBackground="Azure" BackgroundMode="BorderBackground" BorderMode="BorderBrush"/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TabItemNormalBackground">
+            <dxcn:TabBorder ViewInfo="{Binding}" BorderBackground="PeachPuff" 
+            BackgroundMode="BorderBackground" BorderMode="BorderBrush" BorderThickness="1,1,1,0" BorderMargin="0,0,1,0" HoldBorderThickness="2" HoldBorderMargin="0,0,2,2"/>
+        </DataTemplate>        
+        <DataTemplate x:Key="TabItemHoverBackground">
+            <dxcn:TabBorder ViewInfo="{Binding}" BorderBackground="PapayaWhip" BorderBrush="Wheat" 
+            BackgroundMode="BorderBackground" BorderMode="BorderBrush" BorderThickness="1,1,1,0" BorderMargin="0,0,1,0" HoldBorderThickness="2" HoldBorderMargin="0,0,2,2"/>
+        </DataTemplate>
+        <DataTemplate x:Key="TabItemSelectedBackground">
+            <dxcn:TabBorder ViewInfo="{Binding}" BorderBackground="Azure" BorderBrush="Wheat" 
+            BackgroundMode="BorderBackground" BorderMode="BorderBrush" BorderThickness="1,1,1,0" BorderMargin="0,-1,1,-1" HoldBorderThickness="2" HoldBorderMargin="0,0,2,2"/>
+        </DataTemplate>
+        <DataTemplate x:Key="TabItemFocusedBackground">
+            <dxcn:TabBorder ViewInfo="{Binding}" BorderBrush="Brown" BorderBackground="LightCyan" BorderThickness="0" HoldBorderThickness="2" HoldBorderMargin="0,0,2,2" />
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <dx:DXTabControl Name="tabControl" BackgroundTemplate="{StaticResource TabControlBackground}">
+            <dx:DXTabControl.ItemContainerStyle>
+                <Style TargetType="dx:DXTabItem">
+                    <Setter Property="HoverBackgroundTemplate" Value="{StaticResource TabItemHoverBackground}"/>
+                    <Setter Property="NormalBackgroundTemplate" Value="{StaticResource TabItemNormalBackground}"/>
+                    <Setter Property="SelectedBackgroundTemplate" Value="{StaticResource TabItemSelectedBackground}"/>
+                    <Setter Property="FocusedBackgroundTemplate" Value="{StaticResource TabItemFocusedBackground}"/>
+                </Style>
+            </dx:DXTabControl.ItemContainerStyle>
+            <dx:DXTabItem Header="Original Text">
+                <TextBox/>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Edited Text">
+                <TextBox/>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Result Text">
+                <TextBox/>
+            </dx:DXTabItem>
+        </dx:DXTabControl>
+    </Grid>
+</dx:DXWindow>
+
