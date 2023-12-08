@@ -4,11 +4,11 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# WPF Tab Control - Customize Tab Background for Selected, Focused, Hovered States
+# WPF Tab Control - Customize Tab Background for Selected, Focused, and Hovered States
 
 This example demonstrates how to customize the background color of tabs based on their state (selected, focused, hovered).
 
-![WPF Tab Control - Customize Tab Background for Selected, Focused, Hovered States](https://raw.githubusercontent.com/DevExpress-Examples/how-to-change-the-tab-background-in-dxtabcontrol-when-a-tab-is-selected-focused-or-hovered-t327852/22.2.2%2B/i/wpf-tab-control-appearance-customization-devexpress.png)
+![WPF Tab Control - Customize Tab Background for Selected, Focused, and Hovered States](https://raw.githubusercontent.com/DevExpress-Examples/how-to-change-the-tab-background-in-dxtabcontrol-when-a-tab-is-selected-focused-or-hovered-t327852/22.2.2%2B/i/wpf-tab-control-appearance-customization-devexpress.png)
 
 The following properties are used:
 
