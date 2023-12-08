@@ -3,21 +3,48 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T327852)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* **[MainWindow.xaml](./CS/DXTabControlExample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DXTabControlExample/MainWindow.xaml))**
-<!-- default file list end -->
-# How to: Change the Tab Background in DXTabControl when a Tab Is Selected, Focused Or Hovered
+# WPF Tab Control - Customize Tab Background for Selected, Focused, Hovered States
+
+This example demonstrates how to customize the background color of tabs based on their state (selected, focused, hovered).
+
+![WPF Tab Control - Customize Tab Background for Selected, Focused, Hovered States](https://raw.githubusercontent.com/DevExpress-Examples/how-to-change-the-tab-background-in-dxtabcontrol-when-a-tab-is-selected-focused-or-hovered-t327852/22.2.2%2B/i/wpf-tab-control-appearance-customization-devexpress.png)
+
+The following properties are used:
+
+* [DXTabItem.NormalBackgroundTemplate](https://documentation.devexpress.com/WPF/DevExpressXpfCoreDXTabItem_NormalBackgroundTemplatetopic.aspx)
+* [DXTabItem.HoverBackgroundTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Core.DXTabItem.HoverBackgroundTemplate)
+* [DXTabItem.SelectedBackgroundTemplate](https://documentation.devexpress.com/WPF/DevExpressXpfCoreDXTabItem_SelectedBackgroundTemplatetopic.aspx)
+* [DXTabItem.FocusedBackgroundTemplate](https://documentation.devexpress.com/WPF/DevExpressXpfCoreDXTabItem_FocusedBackgroundTemplatetopic.aspx)
+
+```xaml
+<dx:DXTabControl Name="tabControl" BackgroundTemplate="{StaticResource TabControlBackground}">
+    <dx:DXTabControl.ItemContainerStyle>
+        <Style TargetType="dx:DXTabItem">
+            <Setter Property="HoverBackgroundTemplate" Value="{StaticResource TabItemHoverBackground}"/>
+            <Setter Property="NormalBackgroundTemplate" Value="{StaticResource TabItemNormalBackground}"/>
+            <Setter Property="SelectedBackgroundTemplate" Value="{StaticResource TabItemSelectedBackground}"/>
+            <Setter Property="FocusedBackgroundTemplate" Value="{StaticResource TabItemFocusedBackground}"/>
+        </Style>
+    </dx:DXTabControl.ItemContainerStyle>
+    <dx:DXTabItem Header="Original Text">
+        <TextBox/>
+    </dx:DXTabItem>
+    <dx:DXTabItem Header="Edited Text">
+        <TextBox/>
+    </dx:DXTabItem>
+    <dx:DXTabItem Header="Result Text">
+        <TextBox/>
+    </dx:DXTabItem>
+</dx:DXTabControl>
+```
+
+## Files to Review
+
+* [MainWindow.xaml](./CS/DXTabControlExample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DXTabControlExample/MainWindow.xaml))
 
 
-<p>In DXTabControl, tabs have different colors when they are selected, focused, or hovered. In this example, it's demonstrated how to change the tab background for all these states. <br>You can do this by using the following properties
+## Documentation
 
-* <a href="https://documentation.devexpress.com/WPF/DevExpressXpfCoreDXTabItem_NormalBackgroundTemplatetopic.aspx">DXTabItem.NormalBackgroundTemplate</a> is responsible for the default tab item header background.
-* <a href="https://documentation.devexpress.com/WPF/DevExpressXpfCoreDXTabItem_HoverBackgroundTemplatetopic.aspx">DXTabItem.HoverBackgroundTemplate</a> is responsible for the tab item header appearance when it is under a mouse pointer.
-* <a href="https://documentation.devexpress.com/WPF/DevExpressXpfCoreDXTabItem_SelectedBackgroundTemplatetopic.aspx">DXTabItem.SelectedBackgroundTemplate</a> is responsible for the tab item header appearance when it is selected.
-* <a href="https://documentation.devexpress.com/WPF/DevExpressXpfCoreDXTabItem_FocusedBackgroundTemplatetopic.aspx">DXTabItem.FocusedBackgroundTemplate</a> is responsible for the tab item header appearance when it is focused.<br><br>You can also customize DXTabControl's background using the <a href="https://documentation.devexpress.com/#WPF/DevExpressXpfCoreDXTabControl_BackgroundTemplatetopic">BackgroundTemplate</a> property.<br><br>If you wish to keep the default state effects, use the approach demonstrated at <a href="https://www.devexpress.com/Support/Center/p/T327840">How To: Change Tab Background in DXTabControl and Keep the Default Gradient and Highlight Effects</a>.<br><br>To learn more about appearance customization in DXTabControl, refer to <a href="https://documentation.devexpress.com/#WPF/CustomDocument113899">Appearance Customization</a>.</p>
-
-<br/>
-
-
+* [Tab Control - Appearance Customization](https://docs.devexpress.com/WPF/113899/controls-and-libraries/layout-management/tab-control/concepts/appearance-customization)
+* [DXTabControl.BackgroundTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Core.DXTabControl.BackgroundTemplate)
