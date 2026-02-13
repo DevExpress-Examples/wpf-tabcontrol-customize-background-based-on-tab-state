@@ -50,7 +50,7 @@ The following properties are used:
 * [Tab Control - Appearance Customization](https://docs.devexpress.com/WPF/113899/controls-and-libraries/layout-management/tab-control/concepts/appearance-customization)
 * [DXTabControl.BackgroundTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Core.DXTabControl.BackgroundTemplate)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-tabcontrol-customize-background-based-on-tab-state&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-tabcontrol-customize-background-based-on-tab-state&~~~was_helpful=no)
 
